@@ -25,7 +25,7 @@ function whilemousedown() {
 
       document.getElementById('ImageContaingerChild').style.left = const_width_start + diff_x + "px";
     }
-  }, 100)
+  }, 50)
 }
 
 var mousedownID = -1;

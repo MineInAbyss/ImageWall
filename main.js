@@ -6,9 +6,7 @@ var scale_height = 2160;
 
 var scale = 1;
 
-window.onload = function() {
-  document.getElementById('drag_indicator').scrollTop = 414;
-}
+window.onload = function() {}
 
 var scrolled = 0;
 var max_scroll = 30;
@@ -117,49 +115,48 @@ function scale_img(new_scale, mouse_pos, prev_mouse_pos, out){
 }
 */
 
-var mouseDown = 0;
-function mousedown(){
-  mouseDown++;
-}
-function mouseup(){
-  mouseDown--;
-}
-
-var drag_start = false
-var drag_start_pos = []
-
-function whilemousedown() {
-  if(drag_start){
-    drag_start_pos = document.getElementById('ImageContainer').style.backgroundPosition.split(" ");
-    drag_start = false;
-  }
-   drag_box = document.getElementById('drag_indicator');
-
-   var left = parseInt(drag_start_pos[0], 10) + parseInt(drag_box.style.left, 10);
-   var top = parseInt(drag_start_pos[1], 10) + parseInt(drag_box.style.left, 10);
-
-   document.getElementById('ImageContainer').style.backgroundPosition = `${left}px ${top}px`
-}
-
 $(window).load(function(){
   $(function() {
-    $( ".drag" ).draggable({});
+    var containmentX1 = $(".drag").parent().offset().left;
+    var containmentY1 = $(".drag").parent().offset().top;
+    var containmentX2 =  ($(".drag").parent().outerWidth() +  $(".drag").parent().offset().left - $('.drag').outerWidth())
+    var containmentY2 = ($(".drag").parent().outerHeight() +  $(".drag").parent().offset().top - $('.drag').outerHeight())
+
+    $( ".drag" ).draggable({
+
+    });
   });
 });
+
+function whilemousedown() {
+  var const_width_start = -3840 * 2;
+  x_pos = document.getElementById('ImageContaingerChild').style.left;
+  y_pos = document.getElementById('ImageContaingerChild').style.top;
+
+  if(parseInt(x_pos, 10) < -3840 * 3  || parseInt(x_pos, 10) > -3840 * 2){
+    diff_x = parseInt(x_pos, 10)  % 3840;
+
+    document.getElementById('ImageContaingerChild').style.left = const_width_start + diff_x + "px";
+  }
+  if(parseInt(y_pos, 10) > 0){
+    document.getElementById('ImageContaingerChild').style.top = 0 + "px";
+  }
+
+  var height = parseInt(window.getComputedStyle(document.getElementById('ImageContainer')).getPropertyValue('height'), 10);
+  if(parseInt(y_pos, 10) < ((2160 - height) * -1)){
+    document.getElementById('ImageContaingerChild').style.top = -1400 + "px";
+  }
+}
 
 var mousedownID = -1;
 $( ".drag" ).live( "dragstart", function( event, ui ) {
   drag_start = true;
   if(mousedownID==-1)  //Prevent multiple loops!
-    mousedownID = setInterval(whilemousedown, 100 /*execute every 100ms*/);
-
+    mousedownID = setInterval(whilemousedown, 1 /*execute every 100ms*/);
 } );
 $( ".drag" ).live( "dragstop", function( event, ui ) {
   if(mousedownID!=-1) {  //Only stop if exists
      clearInterval(mousedownID);
      mousedownID=-1;
    }
-   console.log("stopped");
-   document.getElementById('drag_indicator').style.left = "0px";
-   document.getElementById('drag_indicator').style.top = "0px";
 });

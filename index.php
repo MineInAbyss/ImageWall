@@ -16,9 +16,8 @@
 
   <body>
 
-  <div class="ImageContainer" id="ImageContainer" style="background-position: 0px 0px">
-    <!--<img src="" alt="AbyssImage" style="" class="WallImage drag" id="WallImage" id="scrollable_image" onscroll="scroll_event(event)" onmousemove="mouse_event(event)">-->
-    <div id="drag_indicator" class="drag_box drag" onmousedown="mousedown()" onmouseup="mouseup()"><?php for($i = 0; $i < 150; $i++) echo "<br>"?></div>
+  <div class="ImageContainer" id="ImageContainer">
+    <div Class="ImageContaingerChild drag" id=ImageContaingerChild><?php for($i = 0; $i < 150; $i++) {echo "hello <br>";}?></div>
     <div id="mouse_point"></div>
     <div id="translation_point"></div>
     <div id="middle_point"></div>

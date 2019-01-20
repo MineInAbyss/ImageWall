@@ -15,12 +15,9 @@
   </head>
 
   <body>
-
+  <!-- Image container, child has the background image, is filled with invisible line breaks to add scrollable effect -->
   <div class="ImageContainer" id="ImageContainer">
-    <div Class="ImageContaingerChild drag" id=ImageContaingerChild><?php for($i = 0; $i < 150; $i++) {echo "hello <br>";}?></div>
-    <div id="mouse_point"></div>
-    <div id="translation_point"></div>
-    <div id="middle_point"></div>
+    <div Class="ImageContaingerChild drag" id=ImageContaingerChild><?php for($i = 0; $i < 150; $i++) {echo "<br>";}?></div>
   </div>
 
   </body>

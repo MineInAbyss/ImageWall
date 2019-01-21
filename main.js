@@ -51,37 +51,38 @@ $( ".drag" ).live( "dragstop", function( event, ui ) {
 
 //function to create clickable elements on the map
 function add_Click_Elem(x, y, w = 10, h = 10, name, link="", debug=false){
-  id = elements_on_map.length;
-  refname = "";
-  click_Elem_debug = "";
-  on_click = "window.open('"+link+"', '_blank');";
+  id = elements_on_map.length;  // element number
+  refname = "";                 // debug only needed as reference to the name of the element
+  click_Elem_debug = "";        // extra css line in the style to add background colour
+  on_click = "window.open('"+link+"', '_blank');";  // onclick functionality
 
-  if(debug){refname = name; click_Elem_debug = "Click_Elem_debug"; on_click = "remove_debug_elem("+id+")";}
+  if(debug){refname = name; click_Elem_debug = "Click_Elem_debug"; on_click = "remove_debug_elem("+id+")";} // changes to the variables in debug mode
 
-  document.getElementById('ImageContainerChild').innerHTML += `
-  <div id="Click_Elem_${id}">
-    <div onclick="${on_click}" Class="Click_Elem CELEM_1 ${click_Elem_debug}" style="left: ${x + width * 0}px; top: ${y}px; width: ${w}px; height: ${h}px;" id="Click_Elem_${id}_1"><br>${refname}</div>
-    <div onclick="${on_click}" Class="Click_Elem CELEM_2 ${click_Elem_debug}" style="left: ${x + width * 1}px; top: ${y}px; width: ${w}px; height: ${h}px;" id="Click_Elem_${id}_2"><br>${refname}</div>
-    <div onclick="${on_click}" Class="Click_Elem CELEM_3 ${click_Elem_debug}" style="left: ${x + width * 2}px; top: ${y}px; width: ${w}px; height: ${h}px;" id="Click_Elem_${id}_3"><br>${refname}</div>
-    <div onclick="${on_click}" Class="Click_Elem CELEM_4 ${click_Elem_debug}" style="left: ${x + width * 3}px; top: ${y}px; width: ${w}px; height: ${h}px;" id="Click_Elem_${id}_4"><br>${refname}</div>
-    <div onclick="${on_click}" Class="Click_Elem CELEM_5 ${click_Elem_debug}" style="left: ${x + width * 4}px; top: ${y}px; width: ${w}px; height: ${h}px;" id="Click_Elem_${id}_5"><br>${refname}</div>
-  </div>
-  `
-  elements_on_map.push(name + "_" + id);
+  html_string = `<div id="Click_Elem_${id}">`;  // begin of clickable element
+  for(var i = 0; i < 5; i++){ // program adds 5 clickable elements over the 5 image positions
+    html_string += `<div onclick="${on_click}" Class="Click_Elem ${click_Elem_debug}" style="left: ${x + width * i}px; top: ${y}px; width: ${w}px; height: ${h}px;" id="Click_Elem_${id}_${i+1}"><br>${refname}</div>`;
+  }
+  html_string += `</div>`;
+
+  // adds the clickable element div to the page
+  document.getElementById('ImageContainerChild').innerHTML += html_string;
+  elements_on_map.push(name + "_" + id); // adds the element to the array of existing elements
 }
 
+// function to remove the debug placed clickable element
 function remove_debug_elem(id){
   elem = document.getElementById("Click_Elem_"+id);
   elem.parentNode.removeChild(elem);
   elements_on_map.pop("m_add" + elements_on_map.length + "_" + id);
 }
 
-
+// list of clickable elements to add when the page is loaded
 window.onload = function(){
   add_Click_Elem(129,344, 170, 50, "big grondola", "https://www.youtube.com");
   add_Click_Elem(643,362, 150, 50, "Delver_HQ", "https://www.google.com")
 }
 
+// activates an event listener for when you click on the page ( after clicking on the debug button )
 var clickCount=0;
 function start_add_ui(e){
   setTimeout(function() {
@@ -89,16 +90,18 @@ function start_add_ui(e){
   }, 50);
 }
 
+// function for adding clickable elements as debug element
 function getmousepos(e){
-  mouse_pos = [e.clientX, e.clientY];
-  pos = document.getElementById('ImageContainer').getBoundingClientRect();
-  scroll_y = document.getElementById('ImageContainer').scrollTop;
+  mouse_pos = [e.clientX, e.clientY]; // mouse position relative to the window
+  pos = document.getElementById('ImageContainer').getBoundingClientRect();  // position of the container which holds the draggable image
+  scroll_y = document.getElementById('ImageContainer').scrollTop; // scroll position relative to the image
   x_pos = document.getElementById('ImageContainerChild').style.left; // get the x_pos ( amount left dragged )
-  if(x_pos == ""){
+  if(x_pos == ""){  // if the x_pos is not set it means it's at -width
     x_pos = -width;
   }
-  drag_x = Math.abs(parseInt(x_pos, 10)  % width);
+  drag_x = Math.abs(parseInt(x_pos, 10)  % width); // get the relative to 1 image dragged amount
   console.log("add_Click_Elem("+ (mouse_pos[0] - pos.left + drag_x - 25) + "," + (mouse_pos[1] - pos.top + scroll_y - 25) + ", 50, 50, " + "m_add"+ elements_on_map.length + ")")
-  add_Click_Elem(mouse_pos[0] - pos.left + drag_x - 25, mouse_pos[1] - pos.top + scroll_y - 25, 50, 50, "m_add" + elements_on_map.length, "", true);
-  document.removeEventListener('click', getmousepos);
+  // outputs the command that adds a clickable element to the screen
+  add_Click_Elem(mouse_pos[0] - pos.left + drag_x - 25, mouse_pos[1] - pos.top + scroll_y - 25, 50, 50, "m_add" + elements_on_map.length, "", true); // adds a debug version of that element
+  document.removeEventListener('click', getmousepos); // removes the event listener so you cant place infinite clickable elements
 }

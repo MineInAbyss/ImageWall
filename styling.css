@@ -36,37 +36,6 @@ width is depended on margins
   flex-direction: column;
 }
 
-/* Let's get this party started */
-.ImageContainer::-webkit-scrollbar {
-    width: 40px;
-    height: 30px;
-    border-color: #00000000;
-}
-
-/* Track */
-.ImageContainer::-webkit-scrollbar-track {
-  background: -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(0deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 40%, rgba(109,109,109,1) 40%, rgba(127,127,127,1) 60%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
-background: -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(90deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 40%, rgba(109,109,109,1) 40%, rgba(127,127,127,1) 60%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
-background: linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(90deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 40%, rgba(109,109,109,1) 40%, rgba(127,127,127,1) 60%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
-background-repeat: repeat-y;
-background-position: 50% 0, 50% 25px, 50% 50px, 50% 75px, 50% 100px, 50% 125px, 50% 150px, 50% 50%;
--webkit-background-origin: padding-box;
-background-origin: padding-box;
--webkit-background-clip: border-box;
-background-clip: border-box;
--webkit-background-size: 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, auto auto;
-background-size: 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, auto auto;
-}
-
-/* Handle */
-.ImageContainer::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    background-image: url("scrollbar.png");
-    background-size: 120%;
-    background-repeat: no-repeat;
-    background-position: -2px 0px;
-}
-
 /*
 Image is repeated 5 times among the x-axis start at the most 2nd image at the left wall can be changed by adding to left position.
 keep in mind that that is the middle section.
@@ -87,6 +56,7 @@ keep in mind that that is the middle section.
   z-index: 0;
 }
 
+/* style for the clickable element ( default ->gets changed by the js function )*/
 .Click_Elem{
   width: 20px;
   height: 20px;
@@ -96,26 +66,38 @@ keep in mind that that is the middle section.
   cursor: pointer;
 }
 
+/* debug style of clickable element*/
 .Click_Elem_debug{
   background-color: #FF0000;
 }
 
-.CELEM_1{
-  left: calc(var(--width) * 0);
+/* scrollbar styling from down here */
+.ImageContainer::-webkit-scrollbar {
+    width: 40px;
+    height: 30px;
+    border-color: #00000000;
 }
 
-.CELEM_2{
-  left: calc(var(--width) * 1);
+/* background image of the scroll bar (made with gradiants) */
+.ImageContainer::-webkit-scrollbar-track {
+  background: -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(-225deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -webkit-linear-gradient(0deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 40%, rgba(109,109,109,1) 40%, rgba(127,127,127,1) 60%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+background: -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), -moz-linear-gradient(90deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 40%, rgba(109,109,109,1) 40%, rgba(127,127,127,1) 60%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+background: linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(315deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 47%, rgba(96,96,96,1) 47%, rgba(153,153,153,1) 55%, rgba(255,255,255,0) 55%, rgba(255,255,255,0) 100%), linear-gradient(90deg, rgba(255,255,255,0) 0, rgba(255,255,255,0) 40%, rgba(109,109,109,1) 40%, rgba(127,127,127,1) 60%, rgba(255,255,255,0) 60%, rgba(255,255,255,0) 100%);
+background-repeat: repeat-y;
+background-position: 50% 0, 50% 25px, 50% 50px, 50% 75px, 50% 100px, 50% 125px, 50% 150px, 50% 50%;
+-webkit-background-origin: padding-box;
+background-origin: padding-box;
+-webkit-background-clip: border-box;
+background-clip: border-box;
+-webkit-background-size: 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, auto auto;
+background-size: 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, 25% 20%, auto auto;
 }
 
-.CELEM_3{
-  left: calc(var(--width) * 2);
-}
-
-.CELEM_4{
-  left: calc(var(--width) * 3);
-}
-
-.CELEM_5{
-  left: calc(var(--width) * 4);
+/* the riko & reg scroll bar */
+.ImageContainer::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    background-image: url("scrollbar.png");
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position: -2px 0px;
 }

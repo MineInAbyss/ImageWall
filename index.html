@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>WallImage</title>
 
+    <!-- YOU NEED THESE JQUERY LIBRARIES ON *THIS* VERSION OR THIS WIL NOT WORK-->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.6.2.js"></script>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.js"></script>
 
@@ -17,17 +18,13 @@
   <body>
   <!-- Image container, child has the background image, is filled with invisible line breaks to add scrollable effect -->
   <div class="ImageContainer" id="ImageContainer">
-    <div Class="ImageContainerChild drag" id="ImageContainerChild">
-    </div>
+    <div Class="ImageContainerChild drag" id="ImageContainerChild"></div>
   </div>
-
-  <?php
-  if(true){
-    echo '
-    <div>
-      <button onclick="start_add_ui(event)">Add Click Area</button>
-    </div>';
-  }?>
+  <!-- only the above 3 lines of code are necessarry in the html (also need the jquery scripts) -->
+  <!-- comment this out or remove this when done adding clickable areas -->
+  <div>
+    <button onclick="start_add_ui(event)">Add Click Area</button>
+  </div>';
 
   </body>
 

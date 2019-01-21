@@ -16,8 +16,8 @@ body {
 
 :root {
   /* variables ( sizes of the image ) */
-  --width: calc(1900px * 3);
-  --height: calc(2850px * 3);
+  --width: calc(1920px);
+  --height: calc(6742px);
 }
 
 /*
@@ -46,7 +46,7 @@ keep in mind that that is the middle section.
   height: calc(var(--height));
   background-color: #00FF00;
   background-repeat: repeat;
-  background-image: url("WallImage.jpg");
+  background-image: url("Abyss.png");
   background-attachment: local;
   background-size: var(--width) var(--height);
   display: inline-block;
@@ -58,13 +58,21 @@ keep in mind that that is the middle section.
 }
 
 /* style for the clickable element ( default ->gets changed by the js function )*/
+.Click_Elem_parent{
+  z-index: 1;
+  cursor: pointer;
+}
+
 .Click_Elem{
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 20px;
-  z-index: 1;
-  cursor: pointer;
+}
+
+.Click_Elem:hover {
+  background-color: rgba(123, 128, 0, 0.19);
+  border-radius: 6px;
+  box-shadow: inset 0px 0px 8px 5px rgba(45, 43, 5, 0.11);
 }
 
 /* debug style of clickable element*/

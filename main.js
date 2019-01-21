@@ -1,6 +1,6 @@
 // fill in image width and height:
-var width = 1900 * 3;
-var height = 2850 * 3;
+var width = 1920;
+var height = 6742;
 
 elements_on_map = [];
 
@@ -58,7 +58,7 @@ function add_Click_Elem(x, y, w = 10, h = 10, name, link="", debug=false){
 
   if(debug){refname = name; click_Elem_debug = "Click_Elem_debug"; on_click = "remove_debug_elem("+id+")";} // changes to the variables in debug mode
 
-  html_string = `<div id="Click_Elem_${id}">`;  // begin of clickable element
+  html_string = `<div id="Click_Elem_${id}" class="Click_Elem_parent">`;  // begin of clickable element
   for(var i = 0; i < 5; i++){ // program adds 5 clickable elements over the 5 image positions
     html_string += `<div onclick="${on_click}" Class="Click_Elem ${click_Elem_debug}" style="left: ${x + width * i}px; top: ${y}px; width: ${w}px; height: ${h}px;" id="Click_Elem_${id}_${i+1}"><br>${refname}</div>`;
   }
@@ -78,8 +78,8 @@ function remove_debug_elem(id){
 
 // list of clickable elements to add when the page is loaded
 window.onload = function(){
-  add_Click_Elem(129,344, 170, 50, "big grondola", "https://www.youtube.com");
-  add_Click_Elem(643,362, 150, 50, "Delver_HQ", "https://www.google.com")
+  add_Click_Elem(129,353, 242, 59, "big grondola", "https://www.youtube.com");
+  add_Click_Elem(645,368, 194, 50, "Delver_HQ", "https://www.google.com")
 }
 
 // activates an event listener for when you click on the page ( after clicking on the debug button )

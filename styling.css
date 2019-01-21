@@ -16,8 +16,8 @@ body {
 
 :root {
   /* variables ( sizes of the image ) */
-  --width: 1900px;
-  --height: 2850px;
+  --width: calc(1900px * 3);
+  --height: calc(2850px * 3);
 }
 
 /*
@@ -48,6 +48,7 @@ keep in mind that that is the middle section.
   background-repeat: repeat;
   background-image: url("WallImage.jpg");
   background-attachment: local;
+  background-size: var(--width) var(--height);
   display: inline-block;
   position: absolute;
   left: calc(var(--width) * -2);

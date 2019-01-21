@@ -1,6 +1,6 @@
 // fill in image width and height:
-var width = 1900;
-var height = 2850;
+var width = 1900 * 3;
+var height = 2850 * 3;
 
 elements_on_map = [];
 
